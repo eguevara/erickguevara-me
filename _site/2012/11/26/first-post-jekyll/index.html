@@ -3,40 +3,45 @@
 <head>
 	<meta charset=utf-8 />
 	<title>Erick Guevara </title>
-	<link href="http://www.erickguevara.me/css/bootstrap.min.css?9" rel="stylesheet">    
-    <link href="http://www.erickguevara.me/css/bootstrap-responsive.css?7" rel="stylesheet">
+	<link href="./css/bootstrap.min.css?9" rel="stylesheet">    
+    <link href="./css/bootstrap-responsive.css?7" rel="stylesheet">
 </head>
 <body>
 
 <!-- header -->
-<header id="banner" class="body"> 
+<header id="header_nav"> 
 	<h1><a href="http://www.erickguevara.me">Erick Guevara: A Whit of the Internets...</a></h1> 
-	<small>My Strategeery Approach to Tehnology</small>
+	<small><em>My Strategeery Approach to Nada</em></small>
 	<nav>
 		<ul>
 			<li class="active">
-				<a href="http://www.erickguevara.me">home</a>
+				<a href=".">home</a>
 			</li> 
 			<li>
-				<a href="http://www.erickguevara.me">photos</a>
+				<a href=".">photos</a>
 			</li>  
 			<li>
-				<a href="http://www.erickguevara.me">blog</a>
+				<a href=".">blog</a>
 			</li> 
 			<li>
-				<a href="http://www.erickguevara.me">contact</a>
+				<a href=".">contact</a>
 			</li> 
 		</ul>
 	</nav>  
-</header><!-- /#banner -->	
+</header>
 
-<section>
-<div class="post" style="padding-bottom: 50px;">
-  <div >
-    <h1 ><a title="Permanent Link to First post using Jekyll on GAE." href="/2012/11/26/first-post-jekyll/" rel="bookmark">First post using Jekyll on GAE</a> <br /><small>Posted on Nov 26, 2012</small></h1>
-  </div>
-  <div class="postcontent">
-    <h2>0.0 - The Solution</h2>
+<article id="article_post">
+	<header id="article_header">
+		<h3>
+			<a title="Permanent Link to First post using Jekyll hosted on GAE." 
+				href="/2012/11/26/first-post-jekyll/" rel="bookmark">First post using Jekyll hosted on GAE</a> 
+		</h3>
+		<time datetime="2012-11-26" pubdate>
+			Posted on Nov 26, 2012
+		</time>
+	</header>
+  	<section id="section_content">
+		<h2>0.0 - The Solution</h2>
 
 <p>So i started to look at how to host sites for the least possible cost.  Mainly because i hardly ever
 update the content and I would only use it for development.  In my search, I read a blog by <a href="http://harperreed.org">Harper Reed</a>
@@ -54,19 +59,30 @@ i can already see the usefulness.  If you always hated to write raw html (markup
 entire install on my own..  Have to give credit to <a href="https://www.nata2.org/2011/01/26/how-to-use-app-engine-to-host-static-sites-for-free/">Harper Reed</a> and
 <a href="http://thelab.carlsverre.com/2010/02/09/static-hosting">Carl Sverre</a></p>
 
-<h2>0.2 - Next</h2>
+<h2>0.2 - The Config</h2>
+
+<p>I did make changes to _site.yaml to so that drydrop can route to my _site folder.  I was having issues at first because DryDrop was not
+reading my config file.  I had to verify with the Admin page that the config was being read by DryDrop.  <strong>TODO</strong> I should point my DryDrop settings to
+a branch in github instead of the master.</p>
+
+<h2>0.3 - Next</h2>
 
 <p>So the plan is to learn new things for free. I hope to take advantage of all these free technologies which are available to any of us developers.<br/>
-Sites like the following are a great way to get started:
-* <a href="http://www.github.com">github.com</a> - Such a great tool to look at what people of building.
-* <a href="https://developers.google.com/">https://developers.google.com/</a> - Google has a ton of free api in flavor of language.
-* <a href="http://www.udacity.com">http://www.udacity.com/</a> - Free online learning.  Highly <strong>recommend!</strong>
-* <a href="https://www.coursera.org/">https://www.coursera.org/</a> - free online learning from top Universities.</p>
+Sites like the following are a great way to get started:</p>
 
-  </div>
-</div>
+<ul>
+<li><a href="http://www.github.com">github.com</a> - Such a great tool to look at what people of building.</li>
+<li><a href="https://developers.google.com/">https://developers.google.com/</a> - Google has a ton of free api in flavor of language.</li>
+<li><a href="http://www.udacity.com">http://www.udacity.com/</a> - Free online learning.  Highly <strong>recommend!</strong></li>
+<li><a href="https://www.coursera.org/">https://www.coursera.org/</a> - free online learning from top Universities.</li>
+</ul>
 
-</section>
+
+<p>enjoy.. Till next time!</p>
+
+	</section>
+</article>
+
 
 <!-- footer -->
 <footer>

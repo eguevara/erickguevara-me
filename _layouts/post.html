@@ -1,11 +1,17 @@
 ---
 layout: default
 ---
-<div class="post" style="padding-bottom: 50px;">
-  <div >
-    <h1 ><a title="Permanent Link to {{ page.title }}." href="{{page.url}}" rel="bookmark">{{ page.title }}</a> <br /><small>Posted on {{page.date | date: "%b %d, %Y"}}</small></h1>
-  </div>
-  <div class="postcontent">
-    {{ content }}
-  </div>
-</div>
+<article id="article_post">
+	<header id="article_header">
+		<h3>
+			<a title="Permanent Link to {{ page.title }}." 
+				href="{{page.url}}" rel="bookmark">{{ page.title }}</a> 
+		</h3>
+		<time datetime="{{page.date | date: "%Y-%m-%d"}}" pubdate>
+			Posted on {{page.date | date: "%b %d, %Y"}}
+		</time>
+	</header>
+  	<section id="section_content">
+		{{ content }}
+	</section>
+</article>
