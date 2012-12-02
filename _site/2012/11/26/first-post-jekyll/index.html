@@ -5,42 +5,30 @@
 	<title>Erick Guevara </title>
 	<link href="http://www.erickguevara.me/css/bootstrap.min.css?9" rel="stylesheet">    
     <link href="http://www.erickguevara.me/css/bootstrap-responsive.css?7" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
 </head>
 <body>
 
-<!-- header -->
-<header id="header_nav"> 
-	<h1><a href="http://www.erickguevara.me">Erick Guevara: A Whit of the Internets...</a></h1> 
-	<small><em>My Strategeery Approach to Nada</em></small>
-	<nav>
-		<ul>
-			<li class="active">
-				<a href="http://www.erickguevara.me">home</a>
-			</li> 
-			<li>
-				<a href="http://www.erickguevara.me">photos</a>
-			</li>  
-			<li>
-				<a href="http://www.erickguevara.me">blog</a>
-			</li> 
-			<li>
-				<a href="http://www.erickguevara.me">contact</a>
-			</li> 
-		</ul>
-	</nav>  
+<div class="content-wrapper-outer">
+	<!-- header -->
+	<header class="site-header"> 
+	<p>
+		<a class="logo" href="http://www.erickguevara.me">Erick Guevara: A Whit of the Internets...</a>
+	</p>
+	<div class="site-header-desc">My Strategeery Approach to Nada</div>
 </header>
 
-<article id="article_post">
-	<header id="article_header">
-		<h3>
+	<div class="content-wrapper-inner">
+			<article class="article-post">
+	<header class="article-header">
 			<a title="Permanent Link to First post using Jekyll hosted on GAE." 
 				href="/2012/11/26/first-post-jekyll/" rel="bookmark">First post using Jekyll hosted on GAE</a> 
-		</h3>
 		<time datetime="2012-11-26" pubdate>
 			Posted on Nov 26, 2012
 		</time>
 	</header>
-  	<section id="section_content">
+  	<section class="article-content">
 		<h2>0.0 - The Solution</h2>
 
 <p>So i started to look at how to host sites for the least possible cost.  Mainly because i hardly ever
@@ -83,12 +71,16 @@ Sites like the following are a great way to get started:</p>
 	</section>
 </article>
 
+	</div> <!--content-wrapper-inner-->
 
-<!-- footer -->
-<footer>
-	@erickguevara 2012 - Powered by <a href="http://jekyllrb.com/">Jekyll</a>
+	<!-- footer -->
+	<footer class="site-footer">
+	<p>@erickguevara 2012 - Powered by <a href="http://jekyllrb.com/">Jekyll</a>
+	</p>
 </footer>
 
+
+</div> <!-- content-wrapper-outer-->
 
 </body>
 </html>

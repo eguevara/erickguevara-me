@@ -5,42 +5,30 @@
 	<title>Erick Guevara </title>
 	<link href="http://www.erickguevara.me/css/bootstrap.min.css?9" rel="stylesheet">    
     <link href="http://www.erickguevara.me/css/bootstrap-responsive.css?7" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
 </head>
 <body>
 
-<!-- header -->
-<header id="header_nav"> 
-	<h1><a href="http://www.erickguevara.me">Erick Guevara: A Whit of the Internets...</a></h1> 
-	<small><em>My Strategeery Approach to Nada</em></small>
-	<nav>
-		<ul>
-			<li class="active">
-				<a href="http://www.erickguevara.me">home</a>
-			</li> 
-			<li>
-				<a href="http://www.erickguevara.me">photos</a>
-			</li>  
-			<li>
-				<a href="http://www.erickguevara.me">blog</a>
-			</li> 
-			<li>
-				<a href="http://www.erickguevara.me">contact</a>
-			</li> 
-		</ul>
-	</nav>  
+<div class="content-wrapper-outer">
+	<!-- header -->
+	<header class="site-header"> 
+	<p>
+		<a class="logo" href="http://www.erickguevara.me">Erick Guevara: A Whit of the Internets...</a>
+	</p>
+	<div class="site-header-desc">My Strategeery Approach to Nada</div>
 </header>
 
-<article id="article_post">
-	<header id="article_header">
-		<h3>
+	<div class="content-wrapper-inner">
+			<article class="article-post">
+	<header class="article-header">
 			<a title="Permanent Link to Touch down and all is still lovely..." 
 				href="/2011/04/24/touch-down-and-all-is-still-lovely/" rel="bookmark">Touch down and all is still lovely..</a> 
-		</h3>
 		<time datetime="2011-04-24" pubdate>
 			Posted on Apr 24, 2011
 		</time>
 	</header>
-  	<section id="section_content">
+  	<section class="article-content">
 		<p>Hours later and we finally arrived at London airport.  The flight was as good as any nine hour flight can be.  </p>
 
 
@@ -82,12 +70,16 @@ Plus I need to get rest for tomorrows big day at old trafford.  Manchester. Vs 
 	</section>
 </article>
 
+	</div> <!--content-wrapper-inner-->
 
-<!-- footer -->
-<footer>
-	@erickguevara 2012 - Powered by <a href="http://jekyllrb.com/">Jekyll</a>
+	<!-- footer -->
+	<footer class="site-footer">
+	<p>@erickguevara 2012 - Powered by <a href="http://jekyllrb.com/">Jekyll</a>
+	</p>
 </footer>
 
+
+</div> <!-- content-wrapper-outer-->
 
 </body>
 </html>

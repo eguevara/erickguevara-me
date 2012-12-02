@@ -1,19 +1,26 @@
 ---
 layout: default
 ---
-<section id="section_recent">
-	<h2 class="title">My most recent post</h2>
-	<div class="content">
+<section class="main-content center">
+	<div class="main-recent-posts">
+        <p>My most recent post</p>
+        <ul>
    {% for post in site.posts  limit: 1%}
-        <h3><a href="{{ post.url }}">{{ post.title }}</a> <small>posted on {{ post.date | date: "%b %d, %Y"  }}</small></h3>
+        <li><a href="{{ post.url }}">{{ post.title }}</a> 
+        <small>posted on {{ post.date | date: "%b %d, %Y"  }}</small><li>
     {% endfor %} 
+        </ul>
 	</div>    
-</section>
-<article id="article_posts">
-    <h2>Other recent posts.</h2>
+    <br />
+
+    <div class="main-posts">
+        <p>Other recent posts.</p>
+        <ul>
      {% for post in site.posts offset: 1 limit: 100%}
-        <section>
-        <h3><a href="{{ post.url }}">{{ post.title }}</a> <small>posted on {{ post.date | date: "%b %d, %Y"  }} </small></h3>
-        </section>
+        <li><a href="{{ post.url }}">{{ post.title }}</a> 
+            <small>posted on {{ post.date | date: "%b %d, %Y"  }} </small>
+        </li>
     {% endfor %}
+        </ul>
+    </div>
  </article>

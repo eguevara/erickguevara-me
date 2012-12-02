@@ -5,16 +5,23 @@
 	<title>Erick Guevara </title>
 	<link href="{{ site.media_server }}/css/bootstrap.min.css?{{ site.media_version }}" rel="stylesheet">    
     <link href="{{ site.media_server }}/css/bootstrap-responsive.css?7" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
 </head>
 <body>
 
-<!-- header -->
-{% include header.html %}
+<div class="content-wrapper-outer">
+	<!-- header -->
+	{% include header.html %}
 
-{{ content }}
+	<div class="content-wrapper-inner">
+			{{ content }}
+	</div> <!--content-wrapper-inner-->
 
-<!-- footer -->
-{% include footer.html %}
+	<!-- footer -->
+	{% include footer.html %}
+
+</div> <!-- content-wrapper-outer-->
 
 </body>
 </html>
