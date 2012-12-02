@@ -1,15 +1,15 @@
 ---
 layout: default
 ---
-<article class="article-post">
+<article class="article-post center">
 	<header class="article-header">
-			<a title="Permanent Link to {{ page.title }}." 
-				href="{{page.url}}" rel="bookmark">{{ page.title }}</a> 
+		<a title="Permanent Link to {{ page.title }}." 
+		href="{{page.url}}" rel="bookmark">{{ page.title }}</a> 
 		<time datetime="{{page.date | date: "%Y-%m-%d"}}" pubdate>
-			Posted on {{page.date | date: "%b %d, %Y"}}
+			posted on {{page.date | date: "%b %d, %Y"}}
 		</time>
 	</header>
-  	<section class="article-content">
+	<section class="article-content">
 		{{ content }}
 	</section>
 </article>
