@@ -14,14 +14,89 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0px; }
 
 
+
+.button {
+	display: inline-block;
+padding: 8px 15px;
+line-height: normal;
+position: relative;
+font-family: Helvetica, arial, freesans, clean, sans-serif;
+font-size: 12px;
+font-weight: bold;
+color: #666;
+text-shadow: 0 1px rgba(255, 255, 255, 0.9);
+background-color: #E5E5E5;
+background-image: -moz-linear-gradient(whiteSmoke, #E5E5E5);
+background-image: -webkit-linear-gradient(whiteSmoke, #E5E5E5);
+background-image: linear-gradient(whiteSmoke, #E5E5E5);
+background-repeat: repeat-x;
+border-radius: 3px;
+border: 1px solid #DDD;
+border-bottom-color: #BBB;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+cursor: pointer;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.divider-vertical {
+	float: left;
+width: 1px;
+height: 60px;
+margin: 0 10px;
+background-color: #E5E5E5;
+border-right: 1px solid white;
+}
+
+
+.site-actions {
+	float: right;
+	position: relative;
+	margin-top: -39px;
+	padding-right:10px;
+}
+
+.site-actions a:hover {
+	color: #333;
+	text-decoration: none;
+}
+
+.site-company {
+  margin:auto;
+  width: 640px;
+  text-align: center;
+
+}
+
  .main-logo {
  	padding-bottom: 20px;
 
  }
+ .main-logo img {
+ 	-webkit-border-radius: 5px;
+  	-moz-border-radius: 5px; 
+ }
 
  .site-title {
- 	margin-top: 15px;
+ 	padding-top: 10px;
+ 	#margin-left: 35px;
+ 	#width:300px;
+ 	text-align: left;
  }
+
+  .site-avatar {
+  	margin-left: -10px;
+  	margin-top: 5px;
+ 	width:60px;
+ 	float: left;}
+ 	.site-avatar img {
+ 		-webkit-border-radius: 7px;
+  		-moz-border-radius: 7px; 
+ 	}
+
 
 .site-header {
   position: relative;
@@ -48,7 +123,8 @@ h1, h2, h3, h4, h5, h6 {
     	margin: 20px 0px 0px 0px;
     }
     .site-header-desc {
-    	margin: 0px 0px 10px 0px;
+    	#margin: 0px 0px 10px 0px;
+    	text-align: left;
     }
 
 .site-footer {
@@ -66,7 +142,6 @@ border-top: 1px solid #E5E5E5;
 
 
 .content-wrapper-outer {
-  max-width: 1550px;
   margin: 0px 0px 0px 0px;
   #padding: 10px 0px;
   min-width: 1024px;
@@ -95,10 +170,6 @@ border-top: 1px solid #E5E5E5;
  	text-align:center;
  }
 
- .site-avatar {
- 	float: left;
-
- }
 
 .main-posts {
 		margin-top: 20px;
