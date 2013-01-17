@@ -53,9 +53,9 @@ border-right: 1px solid white;
 
 
 .site-actions {
-	float: right;
+	float: left;
 	position: relative;
-	margin-top: -39px;
+	margin-top: 5px;
 	padding-right:10px;
 }
 
@@ -105,7 +105,7 @@ border-right: 1px solid white;
   overflow: hidden; 
   background-color: whiteSmoke;
   border-bottom: 1px solid #E5E5E5;
-  min-height: 60px;
+  min-height: 90px;
 	}
   .site-header .logo {
     text-decoration: none;
