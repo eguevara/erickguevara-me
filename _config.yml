@@ -21,4 +21,4 @@ title:        "A Whit of my Internets..."
 description:  Living, Experiencing and Computing
 author:       Erick I. Guevara # atom.xml: Name of website's author
 media_version: 9
-media_server: "http://localhost:4000" #http://www.erickguevara.me"
+media_server: "http://www.erickguevara.me"
