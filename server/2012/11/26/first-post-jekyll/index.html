@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>Erick Guevara </title>
+	<link href="http://www.erickguevara.me/css/bootstrap.min.css?9" rel="stylesheet">    
+	<link href="http://www.erickguevara.me/css/bootstrap-responsive.css?7" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="http://www.erickguevara.me/css/main.css">
+	<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+
+
+
+</head>
+<body>
+
+	<div class="content-wrapper-outer">
+		<!-- header -->
+		<header class="site-header"> 
+
+	<div class="site-company">
+		<div class="site-avatar">
+			<img src="http://s.gravatar.com/avatar/451e92939d53a7ea17dcecfc23099840?s=50" />
+		</div>
+		<div class="divider-vertical"></div>
+		<div class="site-title">
+			<a class="logo" href="http://www.erickguevara.me">A Whit of my Internets...</a>
+		</div>
+
+		<div class="site-header-desc">Living, Experiencing and Computing</div>
+	</div>
+	<div class="site-actions">
+		<a class="button" href="http://www.erickguevara.me">Home</a>
+		<a class="button" href="http://www.erickguevara.me/photos/">Photos</a>
+		<a class="button" href="http://www.youtube.com/erickiguevara">Videos</a>
+		<a class="button" href="http://www.erickguevara.me">Resume</a>
+		<a class="button" href="http://www.erickguevara.me">Contact</a>
+		<a class="button" href="http://www.erickguevara.me">Login</a>
+	</div>
+
+</header>
+
+		<div class="content-wrapper-inner">
+			<article class="article-post center">
+	<header class="article-header">
+		<a title="Permanent Link to First post using Jekyll hosted on GAE." 
+		href="/2012/11/26/first-post-jekyll/" rel="bookmark">First post using Jekyll hosted on GAE</a> 
+		<time datetime="2012-11-26" pubdate>
+			posted on Nov 26, 2012
+		</time>
+	</header>
+	<section class="article-content">
+		<h2>0.0 - The Solution</h2>
+
+<p>So i started to look at how to host sites for the least possible cost.  Mainly because i hardly ever
+update the content and I would only use it for development.  In my search, I read a blog by <a href="http://harperreed.org">Harper Reed</a>
+that talked about how to move your static site to Google App Engine with an DryDrop App and use Github to push your changes.
+Pretty awesome.  Continuing to reading the blog i was able to figure out how to move my Wordpress blog with my Europe posts in a matter of days..</p>
+
+<p>The end product... erickguevara.me.</p>
+
+<h2>0.1 - The Install</h2>
+
+<p>I installed all the software needed on my osx lion.  with sudo easy_install, the installs were quick and easy.  Wordpress lets you export  your
+existing blogs in xml format which can then be migrate to Jekyll with a singe cmd line.  I think the trickest part of the install was
+understanding how Jekyll generates the static site from the default folder structure.  Learning markdown was also something new but
+i can already see the usefulness.  If you always hated to write raw html (markup), then you'll <strong>love</strong> markdown. Can't say i did the
+entire install on my own..  Have to give credit to <a href="https://www.nata2.org/2011/01/26/how-to-use-app-engine-to-host-static-sites-for-free/">Harper Reed</a> and
+<a href="http://thelab.carlsverre.com/2010/02/09/static-hosting">Carl Sverre</a></p>
+
+<h2>0.2 - The Config</h2>
+
+<p>I did make changes to _site.yaml to so that drydrop can route to my _site folder.  I was having issues at first because DryDrop was not
+reading my config file.  I had to verify with the Admin page that the config was being read by DryDrop.  <strong>TODO</strong> I should point my DryDrop settings to
+a branch in github instead of the master.</p>
+
+<h2>0.3 - Next</h2>
+
+<p>So the plan is to learn new things for free. I hope to take advantage of all these free technologies which are available to any of us developers.<br/>
+Sites like the following are a great way to get started:</p>
+
+<ul>
+<li><a href="http://www.github.com">github.com</a> - Such a great tool to look at what people of building.</li>
+<li><a href="https://developers.google.com/">https://developers.google.com/</a> - Google has a ton of free api in flavor of language.</li>
+<li><a href="http://www.udacity.com">http://www.udacity.com/</a> - Free online learning.  Highly <strong>recommend!</strong></li>
+<li><a href="https://www.coursera.org/">https://www.coursera.org/</a> - free online learning from top Universities.</li>
+</ul>
+
+
+<p>enjoy.. Till next time!</p>
+
+	</section>
+</article>
+
+		</div> <!--content-wrapper-inner-->
+
+		<!-- footer -->
+		<footer class="site-footer center">
+	<p class="site-footer-cw">Erick I. Guevara © 2012  - Powered by <a href="http://jekyllrb.com/">Jekyll</a>
+	</p>
+	<div class="social-wrapper">
+		<a href="https://facebook.com/erickguevara">
+			<img src="http://www.erickguevara.me/images/facebook.png">
+		</a>
+		<a href="https://twitter.com/erickguevara">
+			<img src="http://www.erickguevara.me/images/twitter.png">
+		</a>
+	</div>
+</footer>
+
+
+	</div> <!-- content-wrapper-outer-->
+
+	<script src="http://www.erickguevara.me/js/main.js"></script>
+
+</body>
+</html>
