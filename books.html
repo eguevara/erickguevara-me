@@ -1,0 +1,60 @@
+---
+layout: default
+---
+<section class="main-content center">
+    <div id="booksfeed" class="booklist">
+        <img id="loader" src="{{ site.media_server }}/images/ajax-loader.gif" />
+    </div>
+	
+</article>
+
+<script> 
+var url = "https://www.googleapis.com/books/v1/users/104374180721134943602/bookshelves/4/volumes?maxResults=100";
+
+console.log("erickguevara");
+
+$.getJSON(url, function(data){
+ var dataLen = data.totalItems;
+
+ console.log(dataLen);
+ //var randomPhoto = Math.floor(Math.random() * data.photos.photo.length);
+ //var item = data.photos.photo[randomPhoto]; 
+
+$.each(data.items, function(i,item) {
+	console.log(item.volumeInfo.title);
+	title = item.volumeInfo.title;
+	desc  =  ''; //item.volumeInfo.description;
+	authors = item.volumeInfo.authors;
+	thumbnail = item.volumeInfo.imageLinks.thumbnail;
+
+	 
+
+	/*
+	
+	<div id="xxx"><div class="book_img">img</div><div class="book_title">title</div><div class="book_desc">desc</div></div>
+
+
+	*/
+
+	div = '<div class="book" id="'+i+'"><img src="' + thumbnail + '"/><br> <span class="book_title">' + title + ' </span><br><span class="book_author">By: ' + authors + '</span></div>';
+
+
+//	 $("<img/>").attr("src", thumbnail).appendTo("#booksfeed");
+
+	 $("#booksfeed").append(div);
+
+
+});
+
+  
+
+})
+.complete(function() {
+    $('#loader').hide();
+})
+.error(function() { 
+     $("<img/>").attr("src", "http://erickguevara.me/images/default.jpg").appendTo("#booksfeed");
+})
+;
+
+</script>
