@@ -15,6 +15,30 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+#images {
+
+
+}
+
+  #images .caption {
+    z-index:600; 
+    background-color:#000; 
+    color:#ffffff; 
+    height:0px; 
+    width:640px; 
+    position:absolute;
+    display: none; 
+  }
+
+.caption p {
+  text-align: left;
+  padding: 5px;
+  font-size: 12px;
+font-weight: bold;
+
+}
+
+
 .button {
 	display: inline-block;
 padding: 4px 8px;
@@ -169,7 +193,7 @@ border-top: 1px solid #E5E5E5;
 .main-logo {
  	margin-bottom: 20px;
  	max-width: 640px;
-    min-height: 510px; 
+  #min-height: 510px; 
 
  	text-align:center;
  }
