@@ -2,6 +2,7 @@
 layout: default
 ---
 <section class="main-content center">
+	<div id="booksInfo" class="booksInfo"></div>
     <div id="booksfeed" class="booklist">
         <img id="loader" src="{{ site.media_server }}/images/ajax-loader.gif" />
     </div>
@@ -9,44 +10,63 @@ layout: default
 </article>
 
 <script> 
+
+function addCommas(nStr)
+{
+ nStr += '';
+ x = nStr.split('.');
+ x1 = x[0];
+ x2 = x.length > 1 ? '.' + x[1] : '';
+ var rgx = /(\d+)(\d{3})/;
+ while (rgx.test(x1)) {
+  x1 = x1.replace(rgx, '$1' + ',' + '$2');
+ }
+ return x1 + x2;
+}
+
+
 var url = "https://www.googleapis.com/books/v1/users/104374180721134943602/bookshelves/4/volumes?maxResults=100";
 
-console.log("erickguevara");
 
 $.getJSON(url, function(data){
  var dataLen = data.totalItems;
 
- console.log(dataLen);
- //var randomPhoto = Math.floor(Math.random() * data.photos.photo.length);
- //var item = data.photos.photo[randomPhoto]; 
+ 	
+
+
+var totalPageCount = 0;
+var totalRetailPrice = 0.0;
 
 $.each(data.items, function(i,item) {
-	console.log(item.volumeInfo.title);
 	title = item.volumeInfo.title;
-	desc  =  ''; //item.volumeInfo.description;
 	authors = item.volumeInfo.authors;
 	thumbnail = item.volumeInfo.imageLinks.thumbnail;
+	pageCount = item.volumeInfo.pageCount;
+
+	if("retailPrice" in item.saleInfo && "amount" in item.saleInfo.retailPrice) {
+		totalRetailPrice += item.saleInfo.retailPrice.amount;
+	} else {totalRetailPrice += 14.99;}
+	
+
+	if (!(isNaN(pageCount))) {
+		totalPageCount += pageCount;
+	}
+	else { totalPageCount += 300 } //just guessing}
 
 	 
 
-	/*
-	
-	<div id="xxx"><div class="book_img">img</div><div class="book_title">title</div><div class="book_desc">desc</div></div>
-
-
-	*/
-
 	div = '<div class="book" id="'+i+'"><img src="' + thumbnail + '"/><br> <span class="book_title">' + title + ' </span><br><span class="book_author">By: ' + authors + '</span></div>';
 
-
-//	 $("<img/>").attr("src", thumbnail).appendTo("#booksfeed");
 
 	 $("#booksfeed").append(div);
 
 
 });
 
-  
+   $("#booksInfo").append("<p>Books I've read through the years.  Some good.. Some bad.. Some turned movies.</p>");
+
+      $("#booksInfo").append("<p><b>Total Books:</b> " +dataLen + " | <b>Total Pages Read:</b> " +
+   	addCommas(totalPageCount) + " | <b>Total Cost:</b> $" + totalRetailPrice.toFixed(2) + " </p>");
 
 })
 .complete(function() {

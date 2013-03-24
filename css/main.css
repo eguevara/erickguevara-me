@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .button {
 	display: inline-block;
-padding: 8px 15px;
+padding: 4px 8px;
 line-height: normal;
 position: relative;
 font-family: Helvetica, arial, freesans, clean, sans-serif;
@@ -55,7 +55,7 @@ border-right: 1px solid white;
 .site-actions {
 	float: left;
 	position: relative;
-	margin-top: 5px;
+	margin-top: 3px;
 	padding-right:10px;
 }
 
@@ -210,6 +210,14 @@ border-top: 1px solid #E5E5E5;
   text-align: left;
 
 
+
+}
+
+.booksInfo b {
+  font-size: 10px;
+      color: #C09853;
+      text-shadow: 0px 1px 0px white;
+  text-align: left;
 
 }
 
