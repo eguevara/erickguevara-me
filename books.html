@@ -25,14 +25,9 @@ function addCommas(nStr)
 }
 
 
-var url = "https://www.googleapis.com/books/v1/users/104374180721134943602/bookshelves/4/volumes?maxResults=100";
+function jsonpcallback(data) {
 
-
-$.getJSON(url, function(data){
- var dataLen = data.totalItems;
-
- 	
-
+var dataLen = data.totalItems;
 
 var totalPageCount = 0;
 var totalRetailPrice = 0.0;
@@ -43,7 +38,7 @@ $.each(data.items, function(i,item) {
 	thumbnail = item.volumeInfo.imageLinks.thumbnail;
 	pageCount = item.volumeInfo.pageCount;
 
-	if("retailPrice" in item.saleInfo && "amount" in item.saleInfo.retailPrice) {
+	if("saleInfo" in item && "retailPrice" in item.saleInfo && "amount" in item.saleInfo.retailPrice) {
 		totalRetailPrice += item.saleInfo.retailPrice.amount;
 	} else {totalRetailPrice += 14.99;}
 	
@@ -63,18 +58,28 @@ $.each(data.items, function(i,item) {
 
 });
 
-   $("#booksInfo").append("<p>Books I've read through the years.  Some good.. Some bad.. Some turned movies.</p>");
+$("#booksInfo").append("<p>Books I've read through the years.  Some good.. Some bad.. Some turned movies.</p>");
 
-      $("#booksInfo").append("<p><b>Total Books:</b> " +dataLen + " | <b>Total Pages Read:</b> " +
-   	addCommas(totalPageCount) + " | <b>Total Cost:</b> $" + totalRetailPrice.toFixed(2) + " </p>");
+$("#booksInfo").append("<p><b>Total Books:</b> " +dataLen + " | <b>Total Pages Read:</b> " + addCommas(totalPageCount) + " | <b>Total Cost:</b> $" + totalRetailPrice.toFixed(2) + " </p>");
 
-})
-.complete(function() {
-    $('#loader').hide();
-})
-.error(function() { 
-     $("<img/>").attr("src", "http://erickguevara.me/images/default.jpg").appendTo("#booksfeed");
-})
-;
+
+}
+
+var url = "http://eguevara-api-services.appspot.com/books";
+
+$.ajax({
+	type: "GET",
+	url: url,
+	datatype: 'callback',
+	dataType: "jsonp",
+	jsonp : "callback",
+	jsonpCallback: "callback",
+	error:function(){ 
+		console.log("falied");
+	},
+	success: function(response){ 
+		$('#loader').hide();
+	}
+});
 
 </script>
